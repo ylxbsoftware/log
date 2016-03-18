@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web前端知识框架</title>
+</head>
+
+<body>
+    <div id="main" style="height:1000px"></div>
+    <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+    <script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+
+    var option = {
+        title: {
+            text: 'Web前端知识框架'
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                dataView: {
+                    show: true,
+                    readOnly: false
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        series: [{
+            name: '树图',
+            type: 'tree',
+            orient: 'horizontal',
+            rootLocation: {
+                x: 100,
+                y: 230
+            },
+            nodePadding: 8,
+            layerPadding: 200,
+            hoverable: false,
+            roam: true,
+            symbolSize: 6,
+            itemStyle: {
+                normal: {
+                    color: '#4883b4',
+                    label: {
+                        show: true,
+                        position: 'right',
+                        formatter: "{b}",
+                        textStyle: {
+                            color: '#000',
+                            fontSize: 5
+                        }
+                    },
+                    lineStyle: {
+                        color: '#ccc',
+                        type: 'curve'
+
+                    }
+                },
+                emphasis: {
+                    color: '#4883b4',
+                    label: {
+                        show: false
+                    },
+                    borderWidth: 0
+                }
+            },
+
+            data: [{
+                "name": "Web前端知识框架",
+                "children": [
+                    // 运行环境
+                    {
+                        "name": "运行环境",
+                        "children": [{
+                                "name": "浏览器",
+                                "children": [
+                                    // 浏览器兼容性
+                                    {
+                                        "name": "浏览器兼容性",
+                                        "children": [{
+                                            "name": "css hack"
+                                        }, {
+                                            "name": "js 例如事件系统"
+                                        }, {
+                                            "name": "渐进增强 优雅降级"
+                                        }]
+                                    },
+                                    // 响应式布局
+                                    {
+                                        "name": "响应式布局"
+                                    },
+                                    // Web安全
+                                    {
+                                        "name": "Web安全",
+                                        "children": [{
+                                            "name": "同源策略"
+                                        }, {
+                                            "name": "XSS 跨站点攻击"
+                                        }, {
+                                            "name": "CSRF跨站点请求伪造"
+                                        }, {
+                                            "name": "点击劫持"
+                                        }, {
+                                            "name": "SQL注入"
+                                        }, {
+                                            "name": "......"
+                                        }]
+                                    },
+                                    // 性能优化
+                                    {
+                                        "name": "性能优化",
+                                        "children": [{
+                                            "name": "压缩"
+                                        }, {
+                                            "name": "css sprites"
+                                        }, {
+                                            "name": "合并 减少http请求"
+                                        }, {
+                                            "name": "缓存"
+                                        }, {
+                                            "name": "CDN"
+                                        }, {
+                                            "name": "避免重定向"
+                                        }, {
+                                            "name": "......"
+                                        }]
+                                    }
+                                ]
+                            },
+
+                            {
+                                "name": "node"
+                            }
+
+                        ]
+                    },
+                    // 编码开发
+                    {
+                        "name": "编码开发",
+                        "children": [
+                            // 开发工具
+                            {
+                                "name": "开发工具",
+                                "children": [{
+                                    "name": "编辑器",
+                                    "children": [{
+                                        "name": "sublime",
+                                        "children": [{
+                                            "name": "zencoding"
+                                        }, {
+                                            "name": "常用插件和快捷键"
+                                        }]
+                                    }, {
+                                        "name": "webstorm"
+                                    }]
+                                }, {
+                                    "name": "效率工具",
+                                    "children": [{
+                                        "name": "grunt",
+                                        "children": [{
+                                            "name": "uglify"
+                                        }, {
+                                            "name": "concat"
+                                        }, {
+                                            "name": "css min"
+                                        }, {
+                                            "name": "jshint"
+                                        }, {
+                                            "name": "csslint"
+                                        }, {
+                                            "name": "watch"
+                                        }, {
+                                            "name": "......"
+                                        }]
+                                    }, {
+                                        "name": "gulp",
+                                        "children": [{
+                                            "name": "相应的插件"
+                                        }]
+                                    }]
+                                }, ]
+                            },
+                            // 模块定义
+                            {
+                                "name": "模块定义",
+                                "children": [{
+                                    "name": "AMD requirejs"
+                                }, {
+                                    "name": "CMD seajs"
+                                }, {
+                                    "name": "commonjs"
+                                }]
+                            },
+                            // 版本管理
+                            {
+                                "name": "版本管理",
+                                "children": [{
+                                    "name": "git github"
+                                }, {
+                                    "name": "svn"
+                                }]
+                            },
+                            // 调试
+                            {
+                                "name": "调试",
+                                "children": [{
+                                    "name": "chrome控制台"
+                                }, {
+                                    "name": "firebug"
+                                }]
+                            },
+                            // 测试
+                            {
+                                "name": "测试",
+                                "children": [{
+                                    "name": "grunt..."
+                                }, {
+                                    "name": "gulp等相应插件..."
+                                }]
+                            },
+                        ]
+                    },
+
+                    // 类库框架
+                    {
+                        "name": "类库框架",
+                        "children": [{
+                            "name": "用于浏览器",
+                            "children": [{
+                                "name": "jQuery",
+                                "children": [{
+                                    "name": "常用API"
+                                }, {
+                                    "name": "常用插件"
+                                }, {
+                                    "name": "自制插件"
+                                }, {
+                                    "name": "源码解读 设计思路"
+                                }]
+                            }, {
+                                "name": "BootStrap",
+                                "children": [{
+                                    "name": "常用样式"
+                                }, {
+                                    "name": "常用插件"
+                                }, {
+                                    "name": "衍生框架 如proUI"
+                                }]
+                            }, {
+                                "name": "fontAwesome icomoon.io"
+                            }, {
+                                "name": "requirejs seajs"
+                            }, {
+                                "name": "BackBone angular等"
+                            }, {
+                                "name": "React"
+                            }]
+                        }, {
+                            "name": "用于node.js",
+                            "children": [{
+                                "name": "自带模块",
+                                "children": [{
+                                    "name": "http"
+                                }, {
+                                    "name": "url"
+                                }, {
+                                    "name": "fs"
+                                }, {
+                                    "name": "......"
+                                }]
+                            }, {
+                                "name": "其他模块",
+                                "children": [{
+                                    "name": "jquery"
+                                }, {
+                                    "name": "backbone"
+                                }, {
+                                    "name": "express"
+                                }, {
+                                    "name": "......"
+                                }]
+                            }]
+                        }]
+                    },
+                    // 理论知识
+                    {
+                        "name": "理论知识",
+                        "children": [{
+                            "name": "硬知识",
+                            "children": [{
+                                "name": "http标准",
+                                "children": [{
+                                        "name": "http请求的过程"
+                                    }, {
+                                        "name": "http状态码的意义"
+                                    }, {
+                                        "name": "http头部信息"
+                                    }, {
+                                        "name": "cookie状态管理"
+                                    }, {
+                                        "name": "方法 Get Post"
+                                    }, {
+                                        "name": "https"
+                                    }
+
+                                ]
+                            }, {
+                                "name": "W3C标准",
+                                "children": [{
+                                    "name": "html html5",
+                                    "children": [{
+                                        "name": "html"
+                                    }, {
+                                        "name": "语义化"
+                                    }, {
+                                        "name": "DOM"
+                                    }, {
+                                        "name": "2D 3D"
+                                    }, {
+                                        "name": "本地存储"
+                                    }]
+
+                                }, {
+                                    "name": "css css3",
+                                    "children": [{
+                                        "name": "层叠规则"
+                                    }, {
+                                        "name": "选择器"
+                                    }, {
+                                        "name": "排版",
+                                        "children": [{
+                                            "name": "position"
+                                        }, {
+                                            "name": "display"
+                                        }, {
+                                            "name": "盒子模型"
+                                        }, {
+                                            "name": "float"
+                                        }]
+                                    }, {
+                                        "name": "绘制"
+                                    }, {
+                                        "name": "动画"
+                                    }]
+
+                                }, {
+                                    "name": "javascript",
+                                    "children": [{
+                                        "name": "DOM API",
+                                        "children": [{
+                                            "name": "增、删、改、查、移动"
+                                        }, {
+                                            "name": "属性操作"
+                                        }, {
+                                            "name": "样式操作"
+                                        }]
+                                    }, {
+                                        "name": "BOM API",
+                                        "children": [{
+                                            "name": "window"
+                                        }, {
+                                            "name": "navigator"
+                                        }, {
+                                            "name": "screen"
+                                        }, {
+                                            "name": "history"
+                                        }, {
+                                            "name": "location"
+                                        }]
+                                    }, {
+                                        "name": "事件",
+                                        "children": [{
+                                            "name": "event对象"
+                                        }, {
+                                            "name": "冒泡/捕获"
+                                        }, {
+                                            "name": "代理"
+                                        }]
+                                    }, {
+                                        "name": "ajax",
+                                        "children": [{
+                                            "name": "XHR 兼容性"
+                                        }, {
+                                            "name": "GET POST"
+                                        }, {
+                                            "name": "异步"
+                                        }, {
+                                            "name": "状态监控"
+                                        }, {
+                                            "name": "跨域"
+                                        }]
+                                    }]
+
+                                }, {
+                                    "name": "JSON"
+                                }, {
+                                    "name": "XML"
+                                }, {
+                                    "name": "websocket"
+                                }, {
+                                    "name": "......."
+                                }]
+                            }, {
+                                "name": "ECMAScript",
+                                "children": [{
+                                    "name": "语法"
+                                }, {
+                                    "name": "宿主对象"
+                                }, {
+                                    "name": "原型链 继承"
+                                }, {
+                                    "name": "上下文环境"
+                                }, {
+                                    "name": "作用域 闭包"
+                                }, {
+                                    "name": "正则表达式"
+                                }, {
+                                    "name": "严格模式"
+                                }]
+                            }]
+                        }, {
+                            "name": "软知识",
+                            "children": [{
+                                "name": "设计模式",
+                                "children": [{
+                                    "name": "5大设计原则"
+                                }, {
+                                    "name": "常用设计模式"
+                                }]
+                            }, {
+                                "name": "面向对象",
+                                "children": [{
+                                    "name": "封装"
+                                }, {
+                                    "name": "继承"
+                                }, {
+                                    "name": "多台"
+                                }]
+                            }, {
+                                "name": "算法"
+                            }, {
+                                "name": "数据结构"
+                            }, {
+                                "name": "......"
+                            }]
+                        }]
+                    }
+                ]
+            }]
+        }]
+    };
+
+
+
+    myChart.setOption(option);
+    </script>
+</body>
