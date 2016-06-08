@@ -1,14 +1,14 @@
 
 1. 发送ajax请求成功时执行的通用函数。
 
-      $(document).on('ajaxSuccess', function(data, status) {
+        $(document).on('ajaxSuccess', function(data, status) {
           if (status.response.indexOf('C0005') > -1) {
-              $('.modal, .modal-overlay').remove();
-              $.alert('对不起，该账号已经在另一设备登录，请重新登录。', function() {
+             $('.modal, .modal-overlay').remove();
+             $.alert('对不起，该账号已经在另一设备登录，请重新登录。', function() {
                   location.href = 'login.html';
-              });
+             });
           }
-      });
+       });
 
 2. 发送ajax请求失败时执行的通用函数。
 
@@ -84,12 +84,12 @@
                   transform: rotate(180deg);
             }
 
-        transition: property duration timing-function delay;
-      
-        transition-property 规定设置过渡效果的 CSS 属性的名称。
-        transition-duration 规定完成过渡效果需要多少秒或毫秒。
-        transition-timing-function  规定速度效果的速度曲线。
-        transition-delay  定义过渡效果何时开始。
+  transition: property duration timing-function delay;
+
+  transition-property 规定设置过渡效果的 CSS 属性的名称。
+  transition-duration 规定完成过渡效果需要多少秒或毫秒。
+  transition-timing-function  规定速度效果的速度曲线。
+  transition-delay  定义过渡效果何时开始。
 
   过渡调速函数(贝塞尔曲线)
   http://cubic-bezier.com/
@@ -102,33 +102,33 @@
 
  7. 优先加载会议室然再加载已预定的会议:
  
-    这里用到Deferred解决ajax请求的同步问题.
+  这里用到Deferred解决ajax请求的同步问题.
 
-    解决邪恶金字塔问题：
+  解决邪恶金字塔问题：
 
-    function initMeeting(mobile, storey) {
-     var deferred = $.Deferred();
-      $.ajax({
-       url: '/qfang-weixin/qiye/meeting/meetingList'
-        …
-        success: function(data){{
-            if(){
-                  ...
-                  deferred.resolve();   //标记会议室列表已经处理完成
-            }else{
-                 ...
-                  deferred.reject();  //标记出错
-            }
-      });
-      return deferred;
-     }
-
-    function initReservedMeeting(mobile, floor) {
-        var d1 = initMeeting(mobile, floor);
-       $.when(d1).done(function() {
-            reservedMeeting(mobile, floor, useDate);   //调用加载已预订的会议
-       });
-    }
+          function initMeeting(mobile, storey) {
+           var deferred = $.Deferred();
+            $.ajax({
+             url: '/qfang-weixin/qiye/meeting/meetingList'
+              …
+              success: function(data){{
+                  if(){
+                        ...
+                        deferred.resolve();   //标记会议室列表已经处理完成
+                  }else{
+                       ...
+                        deferred.reject();  //标记出错
+                  }
+            });
+            return deferred;
+           }
+      
+          function initReservedMeeting(mobile, floor) {
+              var d1 = initMeeting(mobile, floor);
+             $.when(d1).done(function() {
+                  reservedMeeting(mobile, floor, useDate);   //调用加载已预订的会议
+             });
+          }
 
 8. 历史记录功能
 
