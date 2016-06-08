@@ -8,7 +8,7 @@
                   location.href = 'login.html';
              });
           }
-       });
+        });
 
 2. 发送ajax请求失败时执行的通用函数。
 
@@ -125,7 +125,7 @@
       
           function initReservedMeeting(mobile, floor) {
               var d1 = initMeeting(mobile, floor);
-             $.when(d1).done(function() {
+              $.when(d1).done(function() {
                   reservedMeeting(mobile, floor, useDate);   //调用加载已预订的会议
              });
           }
