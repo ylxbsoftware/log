@@ -1,5 +1,5 @@
 
-1.发送ajax请求成功时执行的通用函数。
+1. 发送ajax请求成功时执行的通用函数。
 
   $(document).on('ajaxSuccess', function(data, status) {
       if (status.response.indexOf('C0005') > -1) {
@@ -10,58 +10,57 @@
       }
   });
 
-2.发送ajax请求失败时执行的通用函数。
+2. 发送ajax请求失败时执行的通用函数。
 
   $(document).on('ajaxError', function(data, status) {
       $('.modal, .modal-overlay').remove();
       $.alert('服务器异常，请稍后重试！');
   });
 
-4.如何解决所有ajax请求都需要加请求头信息？
+3. 如何解决所有ajax请求都需要加请求头信息？
 
   $(document).on('ajaxBeforeSend', function(e, xhr) {
       xhr.setRequestHeader('u', sessionStorage.getItem('u'));
       xhr.setRequestHeader('token', sessionStorage.getItem('token'));
   });
 
-5.如何解决ajax后退问题?
+4.如何解决ajax后退问题?
 
   history.replaceState(null, null, 'index.html');
 
   更新当前历史记录条目的状态对象或URL.
 
-6.如何解决跨域问题？
+5.如何解决跨域问题？
 
   nginx反向代理(配置文件)：
 
-         server {
-          listen       80;
-            server_name  localhost;
+      server {
+        listen       80;
+        server_name  localhost;
 
-         #charset koi8-r;
+        #charset koi8-r;
 
-           location / {
-             root   /Users/wanbao/MOA/src;
-           index index.html;
+        location / {
+            root   /Users/wanbao/MOA/src;
+            index index.html;
          }
 
          location /qfang-weixin/  {
-             proxy_pass        http://weixin1.qfang.com;
-               proxy_set_header  X-Real-IP  $remote_addr;
-             proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
-              }
-
+            proxy_pass        http://weixin1.qfang.com;
+            proxy_set_header  X-Real-IP  $remote_addr;
+            proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+          }
       }
 
   页面例子：
-      $.ajax({
-        url: 'qfang-weixin/qiye/notice/list',
-        type: 'POST',
-        data: data,
-        success:function(data){}
-      });
+        $.ajax({
+          url: 'qfang-weixin/qiye/notice/list',
+          type: 'POST',
+          data: data,
+          success:function(data){}
+        });
 
-7. css3 旋转动画(过渡效果)
+6. css3 旋转动画(过渡效果)
 
   效果图：
 ￼
@@ -104,7 +103,7 @@
   对比查看各种调速函数
   注意问题：过渡效果如果持续时间过长，会让网站感觉很慢，最多不超过1s.
 
- 8.优先加载会议室然再加载已预定的会议:
+ 7.优先加载会议室然再加载已预定的会议:
    这里用到Deferred解决ajax请求的同步问题.
 
     解决邪恶金字塔问题：
@@ -136,7 +135,7 @@
     }
 
 
-9.历史记录功能
+8.历史记录功能
 
 
 ￼
@@ -148,14 +147,14 @@
   sessionStorage - 针对一个 session 的数据存储,关闭浏览器窗口后，数据消失。
 
 
-10. 利用gulp 打包压缩
+9. 利用gulp 打包压缩
   js，css  , images, html 压缩，合并 ,加md5后缀解决缓存问题。
 
-11.代码管理
+10.代码管理
 
 http://git.oschina.net
 
-12. 引入字体图标
+11. 引入字体图标
 
 阿里巴巴矢量图标库
 http://www.iconfont.cn/
