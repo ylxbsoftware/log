@@ -1,14 +1,14 @@
 
 1. 发送ajax请求成功时执行的通用函数。
 
-  $(document).on('ajaxSuccess', function(data, status) {
-      if (status.response.indexOf('C0005') > -1) {
-          $('.modal, .modal-overlay').remove();
-          $.alert('对不起，该账号已经在另一设备登录，请重新登录。', function() {
-              location.href = 'login.html';
-          });
-      }
-  });
+      $(document).on('ajaxSuccess', function(data, status) {
+          if (status.response.indexOf('C0005') > -1) {
+              $('.modal, .modal-overlay').remove();
+              $.alert('对不起，该账号已经在另一设备登录，请重新登录。', function() {
+                  location.href = 'login.html';
+              });
+          }
+      });
 
 2. 发送ajax请求失败时执行的通用函数。
 
