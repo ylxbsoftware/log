@@ -1,7 +1,5 @@
 1. 使用hasOwnProperty方法过滤来自原型链中继承来的树形。
 
-     eg:
-
     var own = {
         a: 1,
         b: 2
@@ -18,8 +16,6 @@
     }
    
 这样可以过滤添加的clone方法， 另外一种方法：
-
-	eg:
 	
     for (var i in own) {
         if (Object.prototype.hasOwnProperty.call(own, i)) {
@@ -31,7 +27,6 @@
 为了避免查找属性时从Object对象一路找到原型的冗长过程， 你可以定义一个变量来缓存它。
 
     var i, hasOwn = Object.prototype.hasOwnProperty;
-
     for (i in own) {
         if (hasOwn.call(own, i)) {
             console.log(own[i])
@@ -75,6 +70,5 @@
 
 6. 构造函数和普通函数
 
-	function MyConstructor() { ... }
-	
-   	function myFunction() { ... }
+    function MyConstructor() { ... }
+    function myFunction() { ... }
