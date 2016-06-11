@@ -1,6 +1,6 @@
 1. 使用hasOwnProperty方法过滤来自原型链中继承来的树形。
 
-    eg:
+     eg:
 
     var own = {
         a: 1,
@@ -16,9 +16,11 @@
             console.log(own[i]);
         }
     }
-
+   
 这样可以过滤添加的clone方法， 另外一种方法：
 
+	eg:
+	
     for (var i in own) {
         if (Object.prototype.hasOwnProperty.call(own, i)) {
             console.log(own(i));
@@ -36,7 +38,7 @@
         }
     }
 
-2. 扩充内置原型， 添加自定义方法(不推荐)
+2. 扩充内置原型， 添加自定义方法(不推荐) 
 
     if (typeof Object.prototype.myMethod !== 'function') {
         Object.prototype.myMethod = function() {
@@ -69,10 +71,10 @@
     + '08'结果为8
     Number('08') 结果为8
 
-这两种方法比parseInt更快一些， 因为顾名思义parseInt是一种解析而不是简单地转换。 但当你期望将 '08 hello'
-这类字符串转换为数字的时候， 则必须使用parseInt, 其他方法都会返回NaN.
+这两种方法比parseInt更快一些， 因为顾名思义parseInt是一种解析而不是简单地转换。 但当你期望将 '08 hello' 这类字符串转换为数字的时候， 则必须使用parseInt, 其他方法都会返回NaN.
 
 6. 构造函数和普通函数
 
-    function MyConstructor() {... }
-    function myFunction() {... }
+	function MyConstructor() { ... }
+	
+   	function myFunction() { ... }
