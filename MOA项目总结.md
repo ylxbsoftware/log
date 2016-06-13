@@ -28,15 +28,15 @@
 
         history.replaceState(null, null, 'index.html');
 
-  更新当前历史记录条目的状态对象或URL.
+   更新当前历史记录条目的状态对象或URL.
 
 5. 如何解决跨域问题？
 
-  nginx反向代理(配置文件)：
-
-      server {
-        listen       80;
-        server_name  localhost;
+   nginx反向代理(配置文件)：
+   
+       server {
+         	listen       80;
+         	server_name  localhost;
 
         #charset koi8-r;
 
@@ -50,9 +50,9 @@
             proxy_set_header  X-Real-IP  $remote_addr;
             proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
           }
-      }
+       }
 
-  页面例子：
+   页面例子：
   
         $.ajax({
           url: 'qfang-weixin/qiye/notice/list',
@@ -65,12 +65,12 @@
 
       效果图：
         
-              .step-arrow {
+        .step-arrow {
                       -webkit-transition: 400ms;
                             transition: 400ms;
                             -webkit-transition-property: -webkit-transform;
                             transition-property: transform;
-                  }
+            }
 
       合并写法：
   
@@ -84,27 +84,26 @@
                   transform: rotate(180deg);
             }
 
-  transition: property duration timing-function delay;
 
-  transition-property 规定设置过渡效果的 CSS 属性的名称。
-  transition-duration 规定完成过渡效果需要多少秒或毫秒。
-  transition-timing-function  规定速度效果的速度曲线。
-  transition-delay  定义过渡效果何时开始。
+  		transition: property duration timing-function delay;
+  		transition-property 规定设置过渡效果的 CSS 属性的名称。
+  		transition-duration 规定完成过渡效果需要多少秒或毫秒。
+  		transition-timing-function  规定速度效果的速度曲线。
+  		transition-delay  定义过渡效果何时开始。
 
-  过渡调速函数(贝塞尔曲线)
-  http://cubic-bezier.com/
+   	过渡调速函数(贝塞尔曲线)
+ 	 http://cubic-bezier.com/
+  	推荐动画效果库：
+  	https://daneden.github.io/animate.css/
 
-  推荐动画效果库：
-  https://daneden.github.io/animate.css/
-
-  对比查看各种调速函数
-  注意问题：过渡效果如果持续时间过长，会让网站感觉很慢，最多不超过1s.
+  	对比查看各种调速函数
+  	注意问题：过渡效果如果持续时间过长，会让网站感觉很慢，最多不超过1s.
 
 7. 优先加载会议室然再加载已预定的会议:
  
-  这里用到Deferred解决ajax请求的同步问题.
+  	这里用到Deferred解决ajax请求的同步问题.
 
-  解决邪恶金字塔问题：
+  	解决邪恶金字塔问题：
 
           function initMeeting(mobile, storey) {
            var deferred = $.Deferred();
