@@ -1,3 +1,4 @@
-# 前端技术点分享
+## front-end technology share and learn.
+### thank you for everyone who is help me.
 
 
