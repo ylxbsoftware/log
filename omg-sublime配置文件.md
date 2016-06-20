@@ -38,5 +38,6 @@ sublime配置文件
 		"tab_size": 2,
 		"theme": "Material-Theme-Darker.sublime-theme",
 		"translate_tabs_to_spaces": true,
-		"trim_trailing_white_space_on_save": true
+		"trim_trailing_white_space_on_save": true,
+		"find_selected_text": true
 	}
