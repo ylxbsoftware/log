@@ -39,5 +39,7 @@ sublime配置文件
 		"theme": "Material-Theme-Darker.sublime-theme",
 		"translate_tabs_to_spaces": true,
 		"trim_trailing_white_space_on_save": true,
-		"find_selected_text": true
+		"find_selected_text": true,
+		"default_line_ending": "unix"
+		
 	}
