@@ -1,6 +1,6 @@
 ### mac软件(偏开发)推荐
 
-##### 现任Q房网前端工程师，做过三年后端java开发。常用，好用开发软件推荐。
+##### 现任Q房网前端工程师，做过三年后端java开发,一年前端开发。常用，好用开发软件推荐。
 
     系统： Mac OS
 
@@ -59,7 +59,27 @@
    	vpn: ShadowsocksX
    	
    	包管理工具：npm
+   	
+   	代码片段管理： SnippetsLab
+   	
+   	host配置切换： Gas Mask （iHost）
+   	
+   	快捷键提示： CheatSheet
+   	
+   	brew客户端： Cakebrew
+   	
+   	redis缓存客户端：medis
+   	
+   	正则表达式： Regex
+   	
+   	mac平台游戏：Battle
+   	
+   	系统清理：CleanMyMac
+   	
+   	系统监控： iStat Menus
 	
+
+以上工具推荐，希望提高开发人员在mac平台程序开发效率和愉悦身心。
 	
 2016.7.18 pm
 
