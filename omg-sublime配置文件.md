@@ -41,5 +41,5 @@ sublime配置文件
 		"trim_trailing_white_space_on_save": true,
 		"find_selected_text": true,
 		"default_line_ending": "unix"
-		
+
 	}
