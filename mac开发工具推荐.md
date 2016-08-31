@@ -16,7 +16,7 @@
 
     远程连接：TeamViewer
 
-    文件比较：Beyond Compare
+    文件比较：Beyond Compare,Kaleidoscope
 
     抓包工具：fiddle,charles(喜欢叫它青花瓷)
 
