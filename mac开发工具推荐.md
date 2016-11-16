@@ -44,7 +44,7 @@
 
     图像处理： photoshop cc 2015,pixelmator(未用过，小巧)
 
-    设计：sketch
+    设计：sketch,插件（craft,sketch measure）
     
    	连接iphone: iTools Pro
    	
@@ -54,11 +54,11 @@
    	
    	录屏转gif: licecap
    	
-   	markdown编辑器：Mou,Ulysess
+   	markdown编辑器：Mou,Ulysess,Typora
    	
    	vpn: ShadowsocksX
    	
-   	包管理工具：npm
+   	包管理工具：npm,yarn
    	
    	代码片段管理： SnippetsLab
    	
