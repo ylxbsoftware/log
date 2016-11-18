@@ -14,4 +14,12 @@ if(len(name)==0):
 
 if(len(new)==0):
   new = 'HEAD'
-os.system('git archive -o ' + name + '.zip ' + new +' $(git diff --name-only --diff-filter=ACMRT ' + old + ' ' + new + ')')
+
+#该条命令会导出两次差异版本删除的文件
+#os.system('git archive -o ' + name + '.zip ' + new +' $(git diff --name-only --diff-filter=ACMRT ' + old + ' ' + new + ')')
+
+#该条命令不会会导出两次差异版本删除的文件
+os.system('git diff ' + new + ' ' + old + '  --name-only | xargs tar -cf ' + name + '.zip')
+
+
+
