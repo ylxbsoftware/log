@@ -51,5 +51,7 @@
 - 不擅长
 
   吹牛，交际。
+- 2016.4
+  于武汉购房，安静等待房子女主人，愿她早点出现。
   
 ## so,life is short,do something what you like.  
