@@ -6,13 +6,11 @@
 
     java : eclipse，idea IDE(后起之秀)
 
-    自动构建化：maven,gradle(后起之秀)
-
     web: nginx(主要用来作反向代理，跨域用),tomcat,jetty,openResty
 
     mysql数据库客户端工具：Sequel Pro
 
-    浏览器：chrome(插件：postman,pocket,PageRuler,AdBlock,AlloyDesigner)
+    浏览器：chrome(插件：postman,pocket,PageRuler,AdBlock,AlloyDesigner,Chrono下载管理器,Dimensions,Octotree,WEB前端助手(FeHelper))
 
     远程连接：TeamViewer
 
@@ -20,15 +18,15 @@
 
     抓包工具：fiddle,charles(喜欢叫它青花瓷)
 
-    笔记整理：everynote
+    笔记整理：everynote,奇妙清单
 
     取色器： sip
 
-    编辑器： sublime text 3
+    编辑器： sublime text 3,vs code
 
     svn客户端: Cornerstone
 
-    git客户端: Source Tree
+    git客户端: Source Tree, Towner
 
     文件解压缩： Better Zip
 
@@ -42,45 +40,54 @@
 
     Ftp文件传输：FileZilla
 
+    背景图切换: Irvue
+
     图像处理： photoshop cc 2015,pixelmator(未用过，小巧)
 
     设计：sketch,插件（craft,sketch measure）
-    
-   	连接iphone: iTools Pro
-   	
-   	文档协作： team.oschina.net,git.oschina.net
-   	
+
+    设计辅助工具：xScope, Mark Man
+
+   	连接iphone: iTools Pro,iMazing
+
+   	文档协作： team.oschina.net,git.oschina.net,huobanyun.com
+
    	命令行：iTerm
-   	
+
    	录屏转gif: licecap
-   	
-   	markdown编辑器：Mou,Ulysess,Typora
-   	
+
+   	markdown编辑器：Mou,Ulysess,Typora,MWweb
+
    	vpn: ShadowsocksX
-   	
+
    	包管理工具：npm,yarn
-   	
+
    	代码片段管理： SnippetsLab
-   	
+
    	host配置切换： Gas Mask （iHost）
-   	
+
    	快捷键提示： CheatSheet
-   	
+
    	brew客户端： Cakebrew
-   	
+
    	redis缓存客户端：medis
-   	
+
    	正则表达式： Regex
-   	
+
    	mac平台游戏：Battle
-   	
+
    	系统清理：CleanMyMac
-   	
+
    	系统监控： iStat Menus
-	
+
+    网盘：百度云同步盘，MEGAsync，drop box
+
+    邮箱：air mail
+
+    词典：欧路词典
 
 以上工具推荐，希望提高开发人员在mac平台程序开发效率和愉悦身心。
-	
+
 2016.7.18 pm
 
 
